@@ -1,0 +1,36 @@
+{
+    "name": "pixelpolishers/pp.system.ui",
+    "description": "A C++ library user interface library.",
+    "projects": [{
+        "name": "pp.system.ui",
+        "type": "static-library",
+        "pch": {
+            "header": "PP/System/UI/PrecompiledHeader.hpp",
+            "source": "source/PP/System/UI/PrecompiledHeader.cpp"
+        },
+        "paths": {
+            "include": ["includes"]
+        },
+        "configurations": [{
+            "name": "Debug",
+            "debug": true,
+            "output": "libs/$(ideproject.name)_d",
+            "dependencies": ["pixelpolishers/pp.system"]
+        },
+        {
+            "name": "Release",
+            "debug": false,
+            "output": "libs/$(ideproject.name)",
+            "dependencies": ["pixelpolishers/pp.system"]
+        }],
+        "source": {
+            "extensions": ["cpp", "hpp", "inl"],
+            "paths": ["includes/PP/System/UI", "source/PP/System/UI"],
+            "sources": true
+        },
+        "dependencies": [{
+            "name": "pixelpolishers/pp.system",
+            "version": "*"
+        }]
+    }]
+}

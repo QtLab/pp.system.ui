@@ -19,3 +19,10 @@
 *.exe
 *.out
 *.app
+
+# Project
+build
+intermediate
+libs
+vendor
+resolver.lock
